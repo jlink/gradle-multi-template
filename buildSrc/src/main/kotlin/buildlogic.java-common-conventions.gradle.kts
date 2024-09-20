@@ -29,4 +29,10 @@ tasks.named<Test>("test") {
     include("**/*Examples.class")
     include("**/*Test.class")
     include("**/*Tests.class")
+
+    reports {
+        junitXml.required = true
+    }
+
+    testLogging.showStandardStreams = true
 }
