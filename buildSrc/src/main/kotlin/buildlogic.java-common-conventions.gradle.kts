@@ -14,13 +14,15 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-val javaVersion: String = System.getProperty("java.version") ?: "21"
+val javaVersion: String = System.getProperty("matrix.version") ?: "21"
+val javaVendor: String = System.getProperty("matrix.vendor") ?: "adoptium"
 
-//println("Using Java version: $javaVersion")
+println("Using Java version: $javaVersion - $javaVendor")
 
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(javaVersion)
+        vendor = JvmVendorSpec.matching(javaVendor)
     }
 }
 

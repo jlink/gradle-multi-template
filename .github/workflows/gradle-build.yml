@@ -10,9 +10,10 @@ jobs:
 
     strategy:
       matrix:
-        java: [ '21', '22']
+        version: [ '21', '22']
+        vendor: ['adoptium', 'oracle']
 
-    name: Build on Java ${{ matrix.java }}
+    name: Build with JDK ${{ matrix.version }} - ${{ matrix.vendor }}
 
     steps:
       - name: Checkout sources
@@ -23,10 +24,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 21
-          check-latest: true
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
       - name: Gradle Build
-        run: ./gradlew build -Djava.version=${{ matrix.java }}
+        run: ./gradlew build -Dmatrix.version=${{ matrix.version }} -Dmatrix.vendor=${{ matrix.vendor }}
