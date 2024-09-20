@@ -1,4 +1,10 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-apiguardian = "1.1.2" # How to use that version in dependencies declaration?
+apiguardian = "1.1.2"
+junit-jupiter = "5.10.3"
+
+[libraries]
+# How to use those libraries in dependencies?
+apiguardian = { module = "org.apiguardian:apiguardian-api", version.ref = "apiguardian" }
+junitJupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
