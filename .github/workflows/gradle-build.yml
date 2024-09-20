@@ -22,11 +22,11 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ matrix.Java }} ## This does not change the Gradle toolchain!
+          java-version: 21
           check-latest: true
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
       - name: Gradle Build
-        run: ./gradlew build
+        run: ./gradlew build -Djava.version=${{ matrix.java }}

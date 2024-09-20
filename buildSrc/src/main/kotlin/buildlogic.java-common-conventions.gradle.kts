@@ -14,9 +14,13 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+val javaVersion: String = System.getProperty("java.version") ?: "21"
+
+//println("Using Java version: $javaVersion")
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(javaVersion)
     }
 }
 
