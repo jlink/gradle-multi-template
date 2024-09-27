@@ -1,0 +1,12 @@
+- Publish to Maven
+- Describe how to use the template in README
+- Extend GH Action Matrix
+    - TZ
+    - Locale
+    - OS
+- Improve test failure reporting in GH Action
+- Add Kotlin project
+- Add special code for Java version > 21
+- Support Java module system
+    - module-info.java
+    - test suite
