@@ -1,7 +1,7 @@
 dependencyResolutionManagement {
     // Reuse version catalog from the main build.
     versionCatalogs {
-        create("libs", { from(files("../gradle/libs.versions.toml")) })
+        register("libs", { from(files("../libs.versions.toml")) })
     }
 }
 
