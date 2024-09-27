@@ -12,4 +12,4 @@ class ExampleApiTests {
 		String result = api.sayHelloTo("World");
 		assertEquals("Hello from ExampleAPI to World", result);
 	}
- }
+}

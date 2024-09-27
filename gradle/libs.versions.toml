@@ -5,6 +5,6 @@ apiguardian = "1.1.2"
 junit-jupiter = "5.10.3"
 
 [libraries]
-# How to use those libraries in dependencies?
+# How to use those libraries in dependencies added in plugins?
 apiguardian = { module = "org.apiguardian:apiguardian-api", version.ref = "apiguardian" }
-junitJupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }

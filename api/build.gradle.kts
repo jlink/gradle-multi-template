@@ -5,5 +5,8 @@ plugins {
 description = "Example API module"
 
 dependencies {
+    api(libs.apiguardian)
     implementation(project(":utilities"))
+
+    testImplementation(libs.junit.jupiter)
 }
